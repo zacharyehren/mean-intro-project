@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 
-import { MatToolbarModule } from '@angular/material';
+import { MatToolbarModule, MatFormFieldModule, MatInputModule, MatOptionModule, MatSelectModule, MatIconModule, MatButtonModule, MatCardModule, MatTableModule, MatDividerModule, MatSnackBarModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -14,11 +14,11 @@ import { EditComponent } from './components/edit/edit.component';
 import { IssueService } from './issue.service';
 
 const routes: Routes = [
-  { path: 'create', component: CreateComponent},
+  { path: 'create', component: CreateComponent },
   { path: 'edit/:id', component: EditComponent },
-  { path: 'list', component: ListComponent},
+  { path: 'list', component: ListComponent },
   // pathMatch will only redirect with an exact match
-  { path: '', redirectTo: 'list', pathMatch: 'full'}
+  { path: '', redirectTo: 'list', pathMatch: 'full' }
 ];
 
 @NgModule({
@@ -33,7 +33,17 @@ const routes: Routes = [
     BrowserAnimationsModule,
     RouterModule.forRoot(routes),
     MatToolbarModule,
-    HttpClientModule
+    HttpClientModule,
+    MatFormFieldModule, 
+    MatInputModule, 
+    MatOptionModule, 
+    MatSelectModule, 
+    MatIconModule, 
+    MatButtonModule, 
+    MatCardModule, 
+    MatTableModule, 
+    MatDividerModule, 
+    MatSnackBarModule
   ],
   providers: [IssueService],
   bootstrap: [AppComponent]
